@@ -37,7 +37,7 @@ const config = {
       const cleanOrigin = origin.replace(/\/$/, '');
       
       if (allowedOrigins.includes(cleanOrigin) || allowedOrigins.includes('*')) {
-        callback(null, true);
+        callback(null, origin);
       } else {
         callback(new Error('Not allowed by CORS'));
       }
